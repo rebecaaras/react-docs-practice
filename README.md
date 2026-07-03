@@ -4,7 +4,7 @@ Me stumbling through react docs because, why not?
 
 ## Learning Roadmap
 
-- [ ] [Sharing state between components](https://react.dev/learn/sharing-state-between-components)
+- [x] [Sharing state between components](https://react.dev/learn/sharing-state-between-components)
 - [ ] [State and Lifecycle](https://legacy.reactjs.org/docs/state-and-lifecycle.html#state-updates-may-be-asynchronous)
 - [ ] [Queueing a Series of State Updates](https://react.dev/learn/queueing-a-series-of-state-updates)
 
