@@ -1,5 +1,36 @@
 import { useState } from 'react';
 
+// First challenge of docs page
+export function SyncedInputs(){
+  const [text, setText] = useState('')
+  
+  function handleChange(e){
+    setText(e.target.value)
+  }
+
+  return (
+    <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+      <Input label="First input" text={text} onChange={handleChange}/>
+      <Input label="Second input" text={text} onChange={handleChange}/>
+    </div>
+  )
+}
+
+function Input({label, text, onChange}){
+
+  return(
+    <label>
+      {label}
+      {' '}
+      <input
+        value={text}
+        onChange={onChange}
+      />
+    </label>
+  )
+}
+
+// First example
 function Accordion() {
   const [activeIndex, setActiveIndex] = useState(0);
   
@@ -43,7 +74,11 @@ function Panel({ title, children, isActive, onShow }) {
 
 export default function ManagingStates(){
   return (
-    <Accordion/>
+    <>
+      <Accordion/>
+      <hr/>
+      <SyncedInputs/>
+    </>
   )
 
 }
